@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('kamars', function (Blueprint $table) {
             $table->id();
+$table->unsignedBigInteger('asrama_id')->nullable();
+$table->string('kode');
+$table->integer('kapasitas')->default(0);
             $table->timestamps();
         });
     }
@@ -25,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('kamars');
     }
 };
+

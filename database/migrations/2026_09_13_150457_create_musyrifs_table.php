@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('musyrifs', function (Blueprint $table) {
             $table->id();
+$table->string('nama');
+$table->string('telepon')->nullable();
             $table->timestamps();
         });
     }
@@ -25,3 +27,4 @@ return new class extends Migration
         Schema::dropIfExists('musyrifs');
     }
 };
+

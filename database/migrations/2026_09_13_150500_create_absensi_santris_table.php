@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('absensi_santris', function (Blueprint $table) {
             $table->id();
+$table->string('nis')->unique();
+$table->string('nama');
+$table->date('tanggal_lahir')->nullable();
+$table->string('jenis_kelamin')->nullable();
+$table->string('status')->default('AKTIF');
             $table->timestamps();
         });
     }
@@ -25,3 +30,4 @@ return new class extends Migration
         Schema::dropIfExists('absensi_santris');
     }
 };
+

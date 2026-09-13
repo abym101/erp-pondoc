@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('asramas', function (Blueprint $table) {
             $table->id();
+$table->string('kode')->unique();
+$table->string('nama');
+$table->integer('kapasitas')->default(0);
             $table->timestamps();
         });
     }
@@ -25,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('asramas');
     }
 };
+

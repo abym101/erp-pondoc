@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('syahriyahs', function (Blueprint $table) {
             $table->id();
+$table->unsignedBigInteger('santri_id');
+$table->decimal('nominal',18,2)->default(0);
+$table->date('jatuh_tempo');
             $table->timestamps();
         });
     }
@@ -25,3 +28,4 @@ return new class extends Migration
         Schema::dropIfExists('syahriyahs');
     }
 };
+

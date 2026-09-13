@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('ustadzs', function (Blueprint $table) {
             $table->id();
+$table->string('nama');
+$table->string('bidang')->nullable();
             $table->timestamps();
         });
     }
@@ -25,3 +27,4 @@ return new class extends Migration
         Schema::dropIfExists('ustadzs');
     }
 };
+
