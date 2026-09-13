@@ -291,3 +291,15 @@ use App\Http\Controllers\Accounting\FixedAssetProcessController;
 
 Route::post('/erp/fixed-assets', [FixedAssetProcessController::class, 'create']);
 Route::post('/erp/run-depreciation', [FixedAssetProcessController::class, 'runDepreciation']);
+use App\Http\Controllers\ERP\AccountsPayableReportController;
+use App\Http\Controllers\ERP\AccountsReceivableReportController;
+use App\Http\Controllers\ERP\BudgetController;
+use App\Http\Controllers\ERP\PurchaseRequestController;
+use App\Http\Controllers\ERP\GoodsReceiptController;
+use App\Http\Controllers\ERP\AssetMaintenanceController;
+Route::get('/erp/ap-report',[AccountsPayableReportController::class,'index']);
+Route::get('/erp/ar-report',[AccountsReceivableReportController::class,'index']);
+Route::get('/erp/budgets',[BudgetController::class,'index']);
+Route::get('/erp/purchase-requests',[PurchaseRequestController::class,'index']);
+Route::get('/erp/goods-receipts',[GoodsReceiptController::class,'index']);
+Route::get('/erp/asset-maintenance',[AssetMaintenanceController::class,'index']);
